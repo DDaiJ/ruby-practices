@@ -2,8 +2,8 @@ require 'minitest/autorun'
 require_relative 'acronym'
 
 class AcronymTest < Minitest::Test
+  def skip; end
   def test_basic
-    # skip
     assert_equal "PNG", Acronym.abbreviate('Portable Network Graphics')
   end
 
