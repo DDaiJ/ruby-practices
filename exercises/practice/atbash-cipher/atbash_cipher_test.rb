@@ -2,6 +2,8 @@ require 'minitest/autorun'
 require_relative 'atbash_cipher'
 
 class AtbashCipherTest < Minitest::Test
+  def skip; end
+
   def test_encode_yes
     # skip
     plaintext = 'yes'

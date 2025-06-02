@@ -2,8 +2,10 @@ require 'minitest/autorun'
 require_relative 'anagram'
 
 class AnagramTest < Minitest::Test
+  def skip; end
+
   def test_no_matches
-    # skip
+    skip
     detector = Anagram.new("diaper")
     anagrams = detector.match(%w[hello world zombies pants])
     expected = []
@@ -91,7 +93,7 @@ class AnagramTest < Minitest::Test
   end
 
   def test_anagrams_must_use_all_letters_exactly_once
-    skip
+    # skip
     detector = Anagram.new("tapper")
     anagrams = detector.match(["patter"])
     expected = []

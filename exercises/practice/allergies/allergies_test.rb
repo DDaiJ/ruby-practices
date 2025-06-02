@@ -2,6 +2,8 @@ require 'minitest/autorun'
 require_relative 'allergies'
 
 class AllergiesTest < Minitest::Test
+  def skip; end
+
   def test_testing_for_eggs_allergy_not_allergic_to_anything
     # skip
     allergies = Allergies.new(0)

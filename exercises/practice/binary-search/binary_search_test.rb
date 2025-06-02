@@ -2,6 +2,8 @@ require 'minitest/autorun'
 require_relative 'binary_search'
 
 class BinarySearchTest < Minitest::Test
+  def skip; end
+
   def test_finds_a_value_in_an_array_with_one_element
     # skip
     binary = BinarySearch.new([6])

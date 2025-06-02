@@ -2,6 +2,8 @@ require 'minitest/autorun'
 require_relative 'all_your_base'
 
 class AllYourBaseTest < Minitest::Test
+  def skip; end
+
   def test_single_bit_one_to_decimal
     # skip
     digits = [1]

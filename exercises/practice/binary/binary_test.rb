@@ -2,6 +2,8 @@ require 'minitest/autorun'
 require_relative 'binary'
 
 class BinaryTest < Minitest::Test
+  def skip; end
+
   def test_binary_0_is_decimal_0
     # skip
     assert_equal 0, Binary.to_decimal('0')

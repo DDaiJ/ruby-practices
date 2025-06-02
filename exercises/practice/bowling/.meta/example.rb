@@ -2,7 +2,6 @@ class Game
   PINS = { MIN: 0, MAX: 10 }.freeze
   at_exit { public :roll, :score }
 
-
   class BowlingError < StandardError; end
   class RollError < BowlingError; end
   class GameError < BowlingError; end
@@ -41,7 +40,7 @@ class Game
   end
 
   def score_frame(f, i)
-    strike_or_spare = [f.first, f.inject(:+)].any? { |e| e == PINS[:MAX] }
+    strike_or_spare = f.first == PINS[:MAX] || f.sum == PINS[:MAX]
 
     if strike_or_spare
       special(@score_card[i], @score_card[i + 1], @score_card[i + 2])

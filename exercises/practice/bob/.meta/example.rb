@@ -4,14 +4,13 @@ module Bob
   end
 
   def answer(phrase)
-    case
-    when phrase.silent?
+    if phrase.silent?
       'Fine. Be that way!'
-    when phrase.loud? && phrase.quizzical?
+    elsif phrase.loud? && phrase.quizzical?
       'Calm down, I know what I\'m doing!'
-    when phrase.loud?
+    elsif phrase.loud?
       'Whoa, chill out!'
-    when phrase.quizzical?
+    elsif phrase.quizzical?
       'Sure.'
     else
       'Whatever.'

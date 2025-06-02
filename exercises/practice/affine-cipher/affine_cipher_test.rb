@@ -2,6 +2,8 @@ require 'minitest/autorun'
 require_relative 'affine_cipher'
 
 class AffineCipherTest < Minitest::Test
+  def skip; end
+
   def test_encode_yes
     # skip
     cipher = Affine.new(5, 7)

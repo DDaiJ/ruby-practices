@@ -2,6 +2,8 @@ require 'minitest/autorun'
 require_relative 'book_store'
 
 class BookStoreTest < Minitest::Test
+  def skip; end
+
   def test_only_a_single_book
     # skip
     basket = [1]

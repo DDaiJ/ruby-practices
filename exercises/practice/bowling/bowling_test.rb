@@ -2,8 +2,10 @@ require 'minitest/autorun'
 require_relative 'bowling'
 
 class BowlingTest < Minitest::Test
+  def skip; end
+
   def test_should_be_able_to_score_a_game_with_all_zeros
-    # skip
+    skip
     game = Game.new
     rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     rolls.each { |pins| game.roll(pins) }
@@ -115,7 +117,7 @@ class BowlingTest < Minitest::Test
   end
 
   def test_all_strikes_is_a_perfect_game
-    skip
+    # skip
     game = Game.new
     rolls = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
     rolls.each { |pins| game.roll(pins) }

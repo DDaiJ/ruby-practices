@@ -2,6 +2,8 @@ require 'minitest/autorun'
 require_relative 'bob'
 
 class BobTest < Minitest::Test
+  def skip; end
+
   def test_stating_something
     # skip
     remark = "Tom-ay-to, tom-aaaah-to."

@@ -2,13 +2,15 @@ require 'minitest/autorun'
 require_relative 'armstrong_numbers'
 
 class ArmstrongNumbersTest < Minitest::Test
+  def skip; end
+
   def test_zero_is_an_armstrong_number
-    # skip
+    skip
     assert_includes ArmstrongNumbers, 0
   end
 
   def test_single_digit_numbers_are_armstrong_numbers
-    skip
+    # skip
     assert_includes ArmstrongNumbers, 5
   end
 
